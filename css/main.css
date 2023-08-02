@@ -1,0 +1,41 @@
+body {
+  background-color: hsl(212, 45%, 89%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 15px;
+  font-family: Outfit;
+ 
+}
+
+#centerpiece{
+  background-color: white;
+  max-width: 250px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.QRcode{
+  border-radius: 10px;
+  max-width: 250px;
+  height: auto;
+}
+
+p {
+  font-size: 15px;
+  font-family: Outfit;
+  margin: 15px 20px;
+  text-align: center;
+}
+
+.smallText{
+  font-weight: 400; 
+  color: hsl(220, 15%, 55%);
+}
+.bigText{
+  font-weight: 700;
+  font-size: 18px;
+  color: hsl(218, 44%, 22%);
+}
+
