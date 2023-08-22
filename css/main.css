@@ -1,41 +1,132 @@
-body {
+/*
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700
+
+#######
+.whiteCenter = center white frame
+.textField = all the text inside white center
+.bigT = bigger bolder text
+.smallT = smaller thinner text (in white center)
+
+*/
+
+* {margin:0; padding:0;}
+
+/* execute styles only if viewport is 2x or more taller than wudth (mobile) */
+@media (max-aspect-ratio: 1/1.6){
+  .whiteCenter{
+    width: 85vw;
+    border-radius: 5vw;
+  }
+  img {
+    padding: 5vw;
+    width: 75vw;
+    border-radius: 8vw;
+  }
+  .textField {
+    width:75vw;
+    padding: 5vw;
+  }
+  .bigT{
+    font-size: 5vw;
+  }
+  .smallT{
+    font-size: 4vw;
+    padding: 5vw 2.5vw;
+  }
+
+}
+
+/* execute styles only if viewport is 2x taller than wudth to the same width (tablet) */
+@media (min-aspect-ratio: 1/1.6) and (max-aspect-ratio: 1/1){
+  .whiteCenter{
+    width: 75vw;
+    border-radius: 5vw;
+  }
+  img {
+    padding: 5vw;
+    width: 65vw;
+    border-radius: 8vw;
+  }
+  .textField {
+    width:75vw;
+    padding: 5vw;
+  }
+  .bigT{
+    font-size: 5vw;
+  }
+  .smallT{
+    font-size: 4vw;
+    padding: 5vw 2.5vw;
+  }
+
+}
+@media(min-aspect-ratio: 1/1){
+  
+}
+
+body {  /* Light gray */
   background-color: hsl(212, 45%, 89%);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-size: 15px;
-  font-family: Outfit;
- 
 }
 
-#centerpiece{
+.whiteCenter {
   background-color: white;
-  max-width: 250px;
-  padding: 15px;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  
+}
+/* added to @media
+img {
+  padding: 5vw;
+  width: 75vw;
+  border-radius: 8vw;
+}
+*/
+.textField {
+  text-align: center; /* CONST */
+  /*  added to @media
+  width:75vw;
+  padding: 5vw;*/
 }
 
-.QRcode{
-  border-radius: 10px;
-  max-width: 250px;
-  height: auto;
+.bigT{
+  color: hsl(218, 44%, 22%); /* CONST */
+  font-weight: 700; /* CONST */
+  /* added to @media
+  font-size: x-large;*/
 }
 
-p {
-  font-size: 15px;
-  font-family: Outfit;
-  margin: 15px 20px;
-  text-align: center;
-}
-
-.smallText{
-  font-weight: 400; 
-  color: hsl(220, 15%, 55%);
-}
-.bigText{
-  font-weight: 700;
-  font-size: 18px;
-  color: hsl(218, 44%, 22%);
+.smallT{
+  color: hsl(220, 15%, 55%); /* CONST */
+  /* added to @media
+  font-size: large;
+  padding: 5vw 2.5vw;*/
 }
 
